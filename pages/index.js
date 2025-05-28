@@ -22,14 +22,16 @@ export default function Home() {
   if (error) return <p>Ошибка: {error.message}</p>;
 
   return (
-<>
-<pre>{JSON.stringify(data, null, 2)}</pre>
     <div>
+      {/* Отладка: выводим весь полученный объект */}
+      <h2>🛠 Отладка</h2>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+
       <h1>💰 Баланс</h1>
       <pre>{JSON.stringify(data?.balances, null, 2)}</pre>
 
-      <h1>📥 Входящие транзакции</h1>
-      <pre>{JSON.stringify(data?.incoming_transactions, null, 2)}</pre>
+      <h1>📦 Транзакции</h1>
+      <pre>{JSON.stringify(data?.transactions?.tx_responses, null, 2)}</pre>
     </div>
   );
 }
