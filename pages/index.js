@@ -22,6 +22,8 @@ export default function Home() {
   if (error) return <p>Ошибка: {error.message}</p>;
 
   return (
+<>
+<pre>{JSON.stringify(data, null, 2)}</pre>
     <div>
       <h1>💰 Баланс</h1>
       <pre>{JSON.stringify(data?.balances, null, 2)}</pre>
