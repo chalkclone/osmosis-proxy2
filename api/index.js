@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
-  const lcdUrl = "https://lcd-osmosis.keplr.app";
-  const wallet = "osmo1psaaa8z5twqgs4ahgqdxwl86eydmlwhesmv4s9";
+ const lcdUrl = "https://lcd-osmosis.keplr.app";
+ const wallet = "osmo1psaaa8z5twqgs4ahgqdxwl86eydmlwhesmv4s9";
 
   try {
     const [balanceResp, txResp] = await Promise.all([
