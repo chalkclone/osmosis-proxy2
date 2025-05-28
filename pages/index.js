@@ -25,8 +25,10 @@ export default function Home() {
     <div>
       <h1>💰 Баланс</h1>
       <pre>{JSON.stringify(data?.balances, null, 2)}</pre>
-      <h1>📦 Транзакции</h1>
-      <pre>{JSON.stringify(data?.transactions?.tx_responses, null, 2)}</pre>
+
+      <h1>📥 Входящие транзакции</h1>
+      <pre>{JSON.stringify(data?.incoming_transactions, null, 2)}</pre>
     </div>
   );
 }
+
